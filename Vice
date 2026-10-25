@@ -1,0 +1,32 @@
+const searchInput = document.querySelector("#search");
+const cards = [...document.querySelectorAll(".promo-card")];
+const filters = [...document.querySelectorAll(".filter")];
+const resultCount = document.querySelector("#result-count");
+const emptyMessage = document.querySelector("#empty-message");
+
+const dialog = document.querySelector("#details-dialog");
+const dialogTitle = document.querySelector("#dialog-title");
+const dialogDescription = document.querySelector("#dialog-description");
+
+let activeFilter = "todas";
+
+function updateCards() {
+  const searchTerm = searchInput.value
+    .trim()
+    .toLocaleLowerCase("pt-BR");
+
+  let visibleCount = 0;
+
+  cards.forEach((card) => {
+    const name = card.dataset.name;
+    const category = card.dataset.category;
+
+    const matchesSearch = name.includes(searchTerm);
+    const matchesFilter =
+      activeFilter === "todas" || category === activeFilter;
+
+    const isVisible = matchesSearch && matchesFilter;
+
+    card.hidden = !isVisible;
+
+    if
