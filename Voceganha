@@ -1,1 +1,32 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171923">
+  <meta name="description" content="Página demonstrativa de promoções.">
+  <title>PromoZone — Promoções</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="PromoZone - início">
+      <span class="brand-icon">P</span>
+      <span>PromoZone</span>
+    </a>
+    <span class="demo-label">DEMONSTRAÇÃO</span>
+  </header>
+
+  <main class="container" id="inicio">
+    <section class="hero">
+      <p class="eyebrow">OFERTAS EM DESTAQUE</p>
+      <h1>Novidades para você.</h1>
+      <p class="hero-text">
+        Descubra ofertas e novidades em uma página
+        simples, rápida e feita para celular.
+      </p>
+      <a class="primary-button" href="#promocoes">
+        Ver promoções
+      <
